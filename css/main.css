@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: sans-serif;
+  font-size: 12px;
+}
+button, .recipe_name {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
+fieldset {
+  margin-top: 10px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  padding: 10px;
+}
+legend {
+  color: #555;
+}
+.d-flex {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 10px 0;
+}
+.space_between {
+  justify-content: space-between;
+}
+input, select, button {
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: #eee;
+}
+.fsize button, #copy_btn {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6fb9fe;
+  color: white;
+}
+.item_name {
+  width: 130px;
+}
+.item_count, .item_ratio {
+  width: 60px;
+}
+.add_btn, .result_btn {
+  background-color: #6fb9fe;
+  color: white;
+  margin: 10px 0;
+}
+.remove_btn {
+  padding: 5px 8px;
+  background-color: #f99;
+  font-weight: bold;
+  font-size: 12px;
+}
