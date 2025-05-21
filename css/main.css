@@ -1,8 +1,16 @@
 body {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   margin: 0;
   padding: 20px;
   font-family: sans-serif;
   font-size: 12px;
+}
+body.dark {
+  --bg-color: #212529;
+  --text-color: #ffffff;
 }
 button, .recipe_name {
   cursor: pointer;
@@ -16,8 +24,8 @@ fieldset {
   border-radius: 5px;
   padding: 10px;
 }
-legend {
-  color: #555;
+legend {  
+  font-weight: bold;
 }
 .d-flex {
   display: flex;
@@ -61,4 +69,7 @@ input, select, button {
   background-color: #f99;
   font-weight: bold;
   font-size: 12px;
+}
+#theme_toggle {
+  background-color: #212529;
 }

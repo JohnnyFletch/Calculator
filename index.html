@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/main.css" id="theme">
   <link rel="icon" type="image/png" href="img/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
   <link rel="shortcut icon" href="img/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="Порции" />
   <link rel="manifest" href="img/site.webmanifest" />
+  
   <title>Калькулятор</title>
 </head>
 <body>
@@ -28,13 +30,15 @@
     </ol>
   </details>
   <fieldset>
-    <legend>Изменить размер текста</legend>
+    <legend class="legend">Настройки</legend>
     <div class="d-flex fsize">
-      <button id="minus">-</button><button id="plus">+</button>
+      <button id="minus">-</button>
+      <button id="plus">+</button>
+      <button id="theme_toggle"><i class="fa fa-moon-o" aria-hidden="true"></i></button>
     </div>
   </fieldset>
   <fieldset>
-    <legend>Добавить ингредиенты</legend>
+    <legend class="legend">Добавить ингредиенты</legend>
     <div class="list">
       <div class="item d-flex">
         <input type="text" placeholder="Название" class="item_name">
@@ -54,7 +58,7 @@
     <div class="recipe"></div>
   </fieldset>
   <fieldset>
-    <legend>Изменить рецепт</legend>
+    <legend class="legend">Изменить рецепт</legend>
     <div class="result_recept"></div>
     <div class="d-flex">
       <select class="item_ratio_type">
@@ -66,7 +70,7 @@
     <button class="result_btn">Вычислить</button>
   </fieldset>
   <fieldset>
-    <legend>Рецепт</legend>
+    <legend class="legend">Рецепт</legend>
     <div class="copy">
       <h3 class="recipe_name" title="Нажмите, чтобы ввести название рецепта">Нажмите, чтобы ввести название рецепта</h3>
       <div class="result_new_recipe"></div>

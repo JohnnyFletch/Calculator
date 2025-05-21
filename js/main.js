@@ -141,3 +141,32 @@ function encreaseFontSize() {
 //Добавляем обработчики события для кнопок
 minus.addEventListener('click', decreaseFontSize)
 plus.addEventListener('click', encreaseFontSize)
+
+//Темная тема
+const themeToggle = document.getElementById('theme_toggle');
+
+//Проверяем сохраненную тему
+const currentTheme = localStorage.getItem('theme')
+if(currentTheme === 'dark') {
+  document.body.classList.add('dark')
+  themeToggle.innerHTML = `<i class="fa fa-sun-o" aria-hidden="true"></i>`
+  themeToggle.style.backgroundColor = 'white'
+  themeToggle.style.color = 'black'
+}
+//Обработчик клика
+themeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('dark')
+  if(document.body.classList.contains('dark')) {
+    themeToggle.innerHTML = `<i class="fa fa-sun-o" aria-hidden="true"></i>`
+    themeToggle.style.backgroundColor = 'white'
+    themeToggle.style.color = 'black'
+  } else {
+    themeToggle.innerHTML = `<i class="fa fa-moon-o" aria-hidden="true"></i>`
+    themeToggle.style.backgroundColor = 'black'
+    themeToggle.style.color = 'white'
+  }
+  //Сохраняем выбор в localStorage
+  const isDark = document.body.classList.contains('dark')
+  localStorage.setItem('theme', isDark ? 'dark' : 'light')
+})
+
